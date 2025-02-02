@@ -12,6 +12,7 @@ app.get("/hello-world", async (req, res) => {
 
 const port = process.env.PORT || 3000;
 console.log(port)
+console.log(process.env.PORT)
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
 })
