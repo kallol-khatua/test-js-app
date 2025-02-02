@@ -11,6 +11,7 @@ app.get("/hello-world", async (req, res) => {
 })
 
 const port = process.env.PORT || 3000;
+console.log(port)
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
 })
