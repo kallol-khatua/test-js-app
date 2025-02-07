@@ -5,11 +5,25 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.get("/", async (req, res) => {
-    res.send("Hi there");
+    const data = {
+        status: 200,
+        port: port,
+        method: req.method,
+        path: req.path,
+        data: process.env.DATA
+    }
+    res.status(200).send(data);
 })
 
 app.get("/hello-world", async (req, res) => {
-    res.send({ status: 200, message: "Hello world", port: port });
+    const data = {
+        status: 200,
+        port: port,
+        method: req.method,
+        path: req.path,
+        data: process.env.DATA
+    }
+    res.status(200).send(data);
 })
 
 app.listen(port, () => {
